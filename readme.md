@@ -74,7 +74,7 @@ Functions should be formatted as follows:
 * **@augments:** For class constuctors, list direct parents.
 * **@mixes:** List mixins that are mixed into the object.
 * **@alias:** If this function is first assigned to a temporary variable this allows you to change the name it's documented under.
-* **@memberOf:** Namespace that this function is contained within if JSDoc is unable to resolve this automatically.
+* **@memberof:** Namespace that this function is contained within if JSDoc is unable to resolve this automatically.
 * **@static:** For classes, used to mark that a function is a static method on the class constructor.
 * **@see:** A function or class relied on.
 * **@link:** URL that provides more information.
@@ -99,7 +99,7 @@ Functions should be formatted as follows:
  * @mixes mixin
  * 
  * @alias realName
- * @memberOf namespace
+ * @memberof namespace
  *
  * @see Function/class relied on
  * @link URL
@@ -134,7 +134,7 @@ Backbone's `initialize` functions should be formatted as follows.
 * **@mixes:** List mixins that are mixed into the class.
 * **@requires:** Lists modules that this class requires. Multiple **@requires** tags can be used.
 * **@alias:** If this class is first assigned to a temporary variable this allows you to change the name it's documented under.
-* **@memberOf:** Namespace that this class is contained within if JSDoc is unable to resolve this automatically.
+* **@memberof:** Namespace that this class is contained within if JSDoc is unable to resolve this automatically.
 * **@static:** For classes, used to mark that a function is a static method on the class constructor.
 * **@see:** A function or class relied on.
 * **@link:** URL that provides more information.
@@ -159,7 +159,7 @@ Class = Parent.extend(/** @lends Class.prototype */{
      * @mixes mixin
      * 
      * @alias realName
-     * @memberOf namespace
+     * @memberof namespace
      *
      * @see Function/class relied on
      * @link URL
@@ -187,7 +187,7 @@ Class members should be formatted as follows:
  * **@type:** List the type of the class member.
  * **@property** List all properties this object has in case it's an Object.
  * **@member:** Optionally use this to override JSDoc's member detection in place of **@type** to force a class member.
- * **@memberOf:** Optionally use this to override what class this is a member of.
+ * **@memberof:** Optionally use this to override what class this is a member of.
 
 ```javascript
 /**
@@ -199,7 +199,7 @@ Class members should be formatted as follows:
  * @property {type} key Description.
  *
  * @member {type} realName
- * @memberOf className
+ * @memberof className
  */
 ```
 
@@ -210,7 +210,7 @@ Namespaces should be formatted as follows:
  * **Short description:** Use a period at the end.
  * **@namespace:** Marks this symbol as a namespace, optionally provide a name as an override.
  * **@since x.x.x:** Should always be 3-digit (e.g. @since 3.6.0).
- * **@memberOf:** Namespace that this namespace is contained in.
+ * **@memberof:** Namespace that this namespace is contained in.
  * **@property:** Properties that this namespace exposes.
  
 ```javascript
@@ -218,7 +218,7 @@ Namespaces should be formatted as follows:
  * Short description. (use period)
  *
  * @namespace realName
- * @memberOf parentNamespace
+ * @memberof parentNamespace
  * 
  * @since x.x.x
  * @property {type} key Description.
