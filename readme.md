@@ -177,7 +177,7 @@ Class = Parent.extend(/** @lends Class.prototype */{
 })
 ```
 
-##Class members
+## Class members
 
 Class members should be formatted as follows:
 
