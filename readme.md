@@ -35,7 +35,7 @@ Functions and closures are third-person singular elements, meaning third-person 
 
 If, after using these tools, the version number cannot be determined, use @since Unknown.
 
-**Code Refactoring**: Do not refactor code in the file when changes to the documentation.
+**Code Refactoring**: Do not refactor code in the file when making changes to the documentation.
 
 ### Grammar
 Descriptive elements should be written as complete sentences. The one exception to this standard is file header summaries, which are intended as file “titles” more than sentences.
