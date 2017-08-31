@@ -1,6 +1,6 @@
-#JavaScript Documentation Standards
+# JavaScript Documentation Standards
 
-##What Should Be Documented
+## What Should Be Documented
 
 JavaScript documentation in WordPress takes the form of either formatted blocks of documentation or inline comments.
 
@@ -14,9 +14,9 @@ The following is a list of what should be documented in WordPress JavaScript fil
 * Events
 * File headers
 
-##Documenting Tips
+## Documenting Tips
 
-###Language
+### Language
 Short descriptions should be clear, simple, and brief. Document “what” and “when” – “why” should rarely need to be included. For example:
 
 Functions and closures are third-person singular elements, meaning third-person singular verbs should be used to describe what each does.
@@ -37,12 +37,12 @@ If, after using these tools, the version number cannot be determined, use @since
 
 **Code Refactoring**: Do not refactor code in the file when changes to the documentation.
 
-###Grammar
+### Grammar
 Descriptive elements should be written as complete sentences. The one exception to this standard is file header summaries, which are intended as file “titles” more than sentences.
 
 The serial (Oxford) comma should be used when listing elements in summaries, descriptions, and parameter or return descriptions.
 
-##Formatting Guidelines
+## Formatting Guidelines
 
 The following guidelines should be followed to ensure that the content of the doc blocks can be parsed properly for inclusion in the code reference.
 
@@ -58,10 +58,10 @@ Markdown can be used, if needed, in a long description. Lines should be
 
 No HTML or markdown is permitted in the descriptions for these tags. HTML elements and tags should be written as “audio element” or “link tag”.
 
-###Line wrapping
+### Line wrapping
 DocBlock text should wrap to the next line after 80 characters of text. If the DocBlock itself is indented on the left 20 character positions, the wrap could occur at position 100, but should not extend beyond a total of 120 characters wide.
 
-##Functions
+## Functions
 
 Functions should be formatted as follows:
 
@@ -117,7 +117,7 @@ Functions should be formatted as follows:
  */
 ```
 
-##Backbone classes
+## Backbone classes
 
 Backbone's `extend` calls should be formatted as follows:
 
@@ -203,7 +203,7 @@ Class members should be formatted as follows:
  */
 ```
 
-##Namespaces
+## Namespaces
 
 Namespaces should be formatted as follows:
 
@@ -225,16 +225,16 @@ Namespaces should be formatted as follows:
  */
 ```
 
-##Inline Comments
+## Inline Comments
 
 Inline comments inside methods and functions should be formatted as follows:
 
-###Single line comments 
+### Single line comments 
 ```javascript
 // Extract the array values.
 ```
 
-###Multi-line comments
+### Multi-line comments
 ```javascript
 /*
  * This is a comment that is long enough to warrant being stretched over
@@ -245,7 +245,7 @@ Inline comments inside methods and functions should be formatted as follows:
 ```
 **Important note:** Multi-line comments must not begin with /** (double asterisk). Use /* (single asterisk) instead.
 
-##File Headers #File Headers
+## File Headers
 
 The JSDoc file header block is used to give an overview of what is contained in the file.
 
