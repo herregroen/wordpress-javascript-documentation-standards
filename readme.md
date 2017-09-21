@@ -61,6 +61,17 @@ No HTML or markdown is permitted in the descriptions for these tags. HTML elemen
 ### Line wrapping
 DocBlock text should wrap to the next line after 80 characters of text. If the DocBlock itself is indented on the left 20 character positions, the wrap could occur at position 100, but should not extend beyond a total of 120 characters wide.
 
+### Aligning comments
+Related comments should be spaced so that they align to make them more easily readable.
+
+For example:
+```javascript
+/**
+ * @param {very_long_type} name           Description.
+ * @param {type}           very_long_name Description.
+ */
+```
+
 ## Functions
 
 Functions should be formatted as follows:
@@ -90,28 +101,30 @@ Functions should be formatted as follows:
  *
  * Long. (use period)
  *
- * @since x.x.x
+ * @since      x.x.x
  * @deprecated x.x.x Use new_function_name() instead.
- * @access private
+ * @access     private
  *
  * @class
  * @augments parent
- * @mixes mixin
+ * @mixes    mixin
  * 
- * @alias realName
+ * @alias    realName
  * @memberof namespace
  *
- * @see Function/class relied on
+ * @see  Function/class relied on
  * @link URL
  * @global
- * @fires eventName
- * @fires className#namespace:eventName
+ *
+ * @fires   eventName
+ * @fires   className#namespace:eventName
  * @listens event:eventName
  *
- * @param {type} var Description.
- * @param {type} var Optional. Description.
- * @param {Object} objectVar Description.
- * @param {type} objectVar.key Description of a key in the objectVar parameter.
+ * @param {type}   var           Description.
+ * @param {type}   [var]         Description of optional variable.
+ * @param {type}   [var=default] Description of optional variable with default variable.
+ * @param {Object} objectVar     Description.
+ * @param {type}   objectVar.key Description of a key in the objectVar parameter.
  * 
  * @returns {type} Description.
  */
@@ -123,7 +136,7 @@ Backbone's `extend` calls should be formatted as follows:
 
 * **@lends** This tag will allow JSDoc to recognize the `extend` function from Backbone as a class definition. This should be placed right before the Object that contains the class definition.
 
-Backbone's `initialize` functions should be formatted as follows.
+Backbone's `initialize` functions should be formatted as follows:
 
 * **Long description:** A supplement to the short description, providing a more detailed description. Use a period at the end.
 * **@summary:** Short description – a brief, one line explanation of the purpose of the class. Use a period at the end.
@@ -150,26 +163,26 @@ Class = Parent.extend(/** @lends Class.prototype */{
      *
      * Long. (use period)
      *
-     * @since x.x.x
+     * @since      x.x.x
      * @deprecated x.x.x Use new_function_name() instead.
-     * @access private
+     * @access     private
      *
      * @constructs
      * @augments Parent
-     * @mixes mixin
+     * @mixes    mixin
      * 
-     * @alias realName
+     * @alias    realName
      * @memberof namespace
      *
-     * @see Function/class relied on
-     * @link URL
+     * @see   Function/class relied on
+     * @link  URL
      * @fires eventName
      * @fires className#namespace:eventName
      *
-     * @param {Object} attributes The model's attributes.
-     * @param {type} attributes.key One of the model's attributes.
-     * @param {Object} options Optional. The model's options.
-     * @param {type} attributes.key One of the model's options.
+     * @param {Object} attributes     The model's attributes.
+     * @param {type}   attributes.key One of the model's attributes.
+     * @param {Object} [options]      The model's options.
+     * @param {type}   attributes.key One of the model's options.
      */
     initialize: function() {
         //Do stuff.
@@ -193,12 +206,13 @@ Class members should be formatted as follows:
 /**
  * Short description. (use period)
  *
- * @since x.x.x
+ * @since  x.x.x
  * @access (private, protected, or public)
- * @type {type}.
+ *
+ * @type     {type}
  * @property {type} key Description.
  *
- * @member {type} realName
+ * @member   {type} realName
  * @memberof className
  */
 ```
@@ -218,9 +232,10 @@ Namespaces should be formatted as follows:
  * Short description. (use period)
  *
  * @namespace realName
- * @memberof parentNamespace
+ * @memberof  parentNamespace
  * 
  * @since x.x.x
+ *
  * @property {type} key Description.
  */
 ```
