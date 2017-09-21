@@ -157,7 +157,7 @@ Backbone's `initialize` functions should be formatted as follows:
   * Backbone Views are passed an `options` parameter.
 
 ```javascript
-Class = Parent.extend(/** @lends Class.prototype */{
+Class = Parent.extend(/** @lends namespace.Class.prototype */{
     /**
      * @summary Short description. (use period)
      *
@@ -167,9 +167,10 @@ Class = Parent.extend(/** @lends Class.prototype */{
      * @deprecated x.x.x Use new_function_name() instead.
      * @access     private
      *
-     * @constructs
-     * @augments Parent
-     * @mixes    mixin
+     * @constructs namespace.Class
+     * @memberOf   namespace
+     * @augments   Parent
+     * @mixes      mixin
      * 
      * @alias    realName
      * @memberof namespace
@@ -278,7 +279,7 @@ WordPress uses JSHint for general code quality testing. Any inline configuration
  *
  * @link   URL
  * @file   This files defines the MyClass class.
- * @author This file was created by AuthorName.
+ * @author AuthorName.
  * @since  x.x.x
  */
  
