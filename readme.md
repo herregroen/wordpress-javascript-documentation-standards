@@ -233,7 +233,7 @@ The functions should be formatted as follows:
 /**
  * Function description, you can use any JSDoc here as long as the function remains private.
  * 
- * @private
+ * @ignore
  */
 var doStuff = function () {
 	// Do stuff.
@@ -256,7 +256,7 @@ Class = Parent.extend(/** @lends namespace.Class.prototype */{
      * You should make a comment ( not a DocBlock using /**, instead use /* or // )
      * noting that you're describing this function using @borrows.
      */
-    doStuff: localFunction,
+    doStuff: doStuff,
 })
 ```
 
