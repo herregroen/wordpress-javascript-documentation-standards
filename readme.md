@@ -191,6 +191,97 @@ Class = Parent.extend(/** @lends namespace.Class.prototype */{
 })
 ```
 
+If a Backbone class does not have an initialize function it should be documented by using **@inheritDoc** as follows:
+
+```javascript
+/**
+ * @summary Short description. (use period)
+ *
+ * Long. (use period)
+ *
+ * @since      x.x.x
+ * @deprecated x.x.x Use new_function_name() instead.
+ * @access     private
+ *
+ * @constructs namespace.Class
+ * @memberOf   namespace
+ * @augments   Parent
+ * @mixes      mixin
+ * @inheritDoc
+ * 
+ * @alias    realName
+ * @memberof namespace
+ *
+ * @see   Function/class relied on
+ * @link  URL
+ */
+Class = Parent.extend(/** @lends namespace.Class.prototype */{
+	// Functions and properties.
+})
+```
+
+> Note: This currently doesn't provide the expected functionality due to a bug with JSDoc's inheritDoc tag.
+> See the issue [here](https://github.com/jsdoc3/jsdoc/issues/1012)
+
+### Local functions
+
+At times functions will be assigned to a local variable before being assigned as a class member.
+
+The functions should be formatted as follows:
+
+```javascript
+/**
+ * Function description, you can use any JSDoc here as long as the function remains private.
+ * 
+ * @private
+ */
+var doStuff = function () {
+	// Do stuff.
+}
+
+Class = Parent.extend(/** @lends namespace.Class.prototype */{
+    /**
+     * Class description
+     *
+     * @constructs namespace.Class
+     * 
+     * @borrows doStuff as prototype.doStuff
+     */
+    initialize: function() {
+        //Do stuff.
+    },
+
+    /*
+     * This function will automatically have it's documentation copied from above.
+     * You should make a comment ( not a DocBlock using /**, instead use /* or // )
+     * noting that you're describing this function using @borrows.
+     */
+    doStuff: localFunction,
+})
+```
+
+### Local ancestors
+
+At times classes will have Ancestors that are only assigned to a local variable.
+Such classes should be assigned to the namespace their children are and be made private.
+
+These should be documented as follows:
+
+```javascript
+var Parent = GrandParent.extend(/** @lends namespace.Parent.prototype */{
+	/**
+     * Class description
+     *
+     * @constructs namespace.Class
+     * 
+     * @private
+     */
+    initialize: function() {
+        //Do stuff.
+    },
+})
+```
+
 ## Class members
 
 Class members should be formatted as follows:
