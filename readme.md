@@ -227,13 +227,15 @@ Class = Parent.extend(/** @lends namespace.Class.prototype */{
 
 At times functions will be assigned to a local variable before being assigned as a class member.
 
+Such functions should be marked as inner functions of the namespace that uses them using `~`.
+
 The functions should be formatted as follows:
 
 ```javascript
 /**
  * Function description, you can use any JSDoc here as long as the function remains private.
  * 
- * @ignore
+ * @alias namespace~doStuff
  */
 var doStuff = function () {
 	// Do stuff.
@@ -245,7 +247,7 @@ Class = Parent.extend(/** @lends namespace.Class.prototype */{
      *
      * @constructs namespace.Class
      * 
-     * @borrows doStuff as prototype.doStuff
+     * @borrows namespace~doStuff as prototype.doStuff
      */
     initialize: function() {
         //Do stuff.
@@ -263,16 +265,16 @@ Class = Parent.extend(/** @lends namespace.Class.prototype */{
 ### Local ancestors
 
 At times classes will have Ancestors that are only assigned to a local variable.
-Such classes should be assigned to the namespace their children are and be made private.
+Such classes should be assigned to the namespace their children are and be made inner classes using `~`.
 
 These should be documented as follows:
 
 ```javascript
-var Parent = GrandParent.extend(/** @lends namespace.Parent.prototype */{
+var Parent = GrandParent.extend(/** @lends namespace~Parent.prototype */{
 	/**
      * Class description
      *
-     * @constructs namespace.Class
+     * @constructs namespace~Class
      * 
      * @private
      */
