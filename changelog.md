@@ -22,6 +22,9 @@
 ##Namespaces
 * Added explanation and examples for documenting namespaces.
 
+##Local functions and classes.
+* Added explanations and examples for documenting local functions and classes as inner members.
+
 ##File headers
 * Updated to use the **@file** and **@author** tags instead of the **@class** tag.
 * Removed tags that cannot be used in file headers.

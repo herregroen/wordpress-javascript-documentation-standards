@@ -90,7 +90,7 @@ Functions should be formatted as follows:
 * **@see:** A function or class relied on.
 * **@link:** URL that provides more information.
 * **@fires:** Event fired by the function. Events tied to a specific class should list the class name.
-* **@listens:** Events this function listens for. An event must be prefixed with the event namespace.
+* **@listens:** Events this function listens for. An event must be prefixed with the event namespace. Events tied to a specific class should list the class name.
 * **@global:** Marks this function as a global function to be included in the global namespace.
 * **@param:** Give a brief description of the variable; denote particulars (e.g. if the variable is optional, its default) with JSDoc @param syntax.
 * **@returns:** Note the period after the description.
@@ -117,8 +117,9 @@ Functions should be formatted as follows:
  * @global
  *
  * @fires   eventName
- * @fires   className#namespace:eventName
+ * @fires   className#eventName
  * @listens event:eventName
+ * @listens className~event:eventName
  *
  * @param {type}   var           Description.
  * @param {type}   [var]         Description of optional variable.
