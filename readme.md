@@ -152,7 +152,7 @@ Backbone's `initialize` functions should be formatted as follows:
 * **@static:** For classes, used to mark that a function is a static method on the class constructor.
 * **@see:** A function or class relied on.
 * **@link:** URL that provides more information.
-* **@fires:** Event fired by the constructor. Events tied to a specific class should list the class name.
+* **@fires:** Event fired by the constructor. Should list the class name.
 * **@param:** Document the arguments passed to the constructor even if not explicitly listed in `initialize`.
   * Backbone Models are passed `attributes` and `options` parameters.
   * Backbone Views are passed an `options` parameter.
@@ -178,8 +178,7 @@ Class = Parent.extend(/** @lends namespace.Class.prototype */{
      *
      * @see   Function/class relied on
      * @link  URL
-     * @fires eventName
-     * @fires className#namespace:eventName
+     * @fires Class#eventName
      *
      * @param {Object} attributes     The model's attributes.
      * @param {type}   attributes.key One of the model's attributes.
