@@ -275,8 +275,6 @@ var Parent = GrandParent.extend(/** @lends namespace~Parent.prototype */{
      * Class description
      *
      * @constructs namespace~Class
-     * 
-     * @private
      */
     initialize: function() {
         //Do stuff.
